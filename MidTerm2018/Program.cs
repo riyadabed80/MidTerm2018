@@ -12,13 +12,13 @@ namespace Midterm
         static void Main(string[] args)
         {
 
-            StreamReader sr = new StreamReader("../../Merchandise.txt");
-            string line = sr.ReadLine();
-            while(line !=null)
-            {
-                Console.WriteLine(line);
-                line = sr.ReadLine();
-            }
+            ////StreamReader sr = new StreamReader("../../Merchandise.txt");
+            ////string line = sr.ReadLine();
+            ////while(line !=null)
+            //{
+            //    Console.WriteLine(line);
+            //    line = sr.ReadLine();
+            //}
 
             Console.WriteLine("Welcome to Grand Circus Coffee!");
             Console.WriteLine("Please choose a category: \n1.  Drinks \n2.  Food \n3.  Merchandise");
@@ -91,6 +91,7 @@ namespace Midterm
                                 }
                             case 3:
                                 {
+                                    
                                     break;
                                 }
                             case 4:
@@ -129,32 +130,50 @@ namespace Midterm
                 case 3:
                     {
                         Console.Clear();
-                        Console.WriteLine("Merchandise\n\n1.  Coffee Mug \n2.  Travel Mug \n3.  T-Shirts \n4.  CoffeeMaker 3000 \n5.  Gift Cards");
+                        Console.WriteLine("Merchandise\n\n1.  Coffee Mug \n2.  Travel Mug \n3.  T-Shirts \n4.  CoffeeMaker 3000 \n5.  $25 Gift Card \n6.  $50 Gift Card \n7.  $100 Gift Card");
                         int selection = int.Parse(Console.ReadLine());
                         switch (selection)
                         {
                             case 1:
                                 {
-                                    Console.WriteLine("Sweet cinnamon and brown sugar.  I like how you think! How many do you want?");
+                                    Console.WriteLine("This will be your new favorite mug! How many do you want?");
                                     int qty = int.Parse(Console.ReadLine());
                                     break;
                                 }
                             case 2:
                                 {
-                                    Console.WriteLine("I always feel fancy eating a croissant. How many do you want?");
+                                    Console.WriteLine("You can take this travel mug anywhere. How many do you want?");
                                     int qty = int.Parse(Console.ReadLine());
                                     break;
                                 }
                             case 3:
                                 {
+                                    Console.WriteLine("This shirt would look great on you. How many do you want?");
+                                    int qty = int.Parse(Console.ReadLine());
                                     break;
                                 }
                             case 4:
                                 {
+                                    Console.WriteLine("This machine has been rated #1 by CoffeeEnthusiast.com How many do you want?");
+                                    int qty = int.Parse(Console.ReadLine());
                                     break;
                                 }
                             case 5:
                                 {
+                                    Console.WriteLine("$25 Gift Card. Someone's lucky. How many do you want?");
+                                    int qty = int.Parse(Console.ReadLine());
+                                    break;
+                                }
+                            case 6:
+                                {
+                                    Console.WriteLine("$50 Gift Card. Someone's lucky.  How many do you want?");
+                                    int qty = int.Parse(Console.ReadLine());
+                                    break;
+                                }
+                            case 7:
+                                {
+                                    Console.WriteLine("$100 Gift Card. Someone's lucky.  How many do you want?");
+                                    int qty = int.Parse(Console.ReadLine());
                                     break;
                                 }
 

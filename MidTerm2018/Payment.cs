@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace MidTerm2018
 {
-    class Payment
+    abstract class Payment
     {
         #region data members
         private decimal total;
+
 
         #endregion
         #region properties
@@ -24,6 +25,7 @@ namespace MidTerm2018
                 total = value;
             }
         }
+        
         #endregion
         #region constructor
         public Payment()
@@ -36,7 +38,7 @@ namespace MidTerm2018
         }
         #endregion
         #region methods
-
+        public abstract decimal GetChange();
         #endregion
     }
 }

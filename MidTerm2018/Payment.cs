@@ -38,7 +38,7 @@ namespace MidTerm2018
         }
         #endregion
         #region methods
-        public abstract decimal GetChange();
+
         #endregion
     }
 }

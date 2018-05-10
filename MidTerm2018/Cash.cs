@@ -40,7 +40,7 @@ namespace MidTerm2018
         #endregion
 
         #region
-        public override decimal GetChange()
+        public decimal GetChange()
         {
             Change = (AmountTendered - Total);
             return Change;

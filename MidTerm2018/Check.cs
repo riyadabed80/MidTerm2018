@@ -11,7 +11,6 @@ namespace MidTerm2018
         #region Data Members
         private string checkNum;
         #endregion
-
         #region Properties
         public string CheckNum
         {
@@ -19,22 +18,17 @@ namespace MidTerm2018
             set { checkNum = value; }
         }
         #endregion
-
-        #region Default Constructor
-        public Check ()
+        #region constructor
+        public Check()
         {
 
         }
-        #endregion
-
-        #region Method Overload
-        public Check (string check)
+        public Check(decimal Total, string CheckNumber) :base(Total)
         {
-            CheckNum = check;
+            CheckNum = CheckNumber;
         }
         #endregion
-
-
-
+        #region Method
+        #endregion
     }
 }

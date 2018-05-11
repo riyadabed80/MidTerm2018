@@ -10,10 +10,6 @@ namespace MidTerm2018
     {
         #region data members
         private decimal total;
-        private decimal amountTendered;
-        private 
-
-
         #endregion
         #region properties
         public decimal Total
@@ -34,7 +30,6 @@ namespace MidTerm2018
         {
 
         }
-        #region
         public Payment(decimal TOTAL)
         {
             Total = TOTAL;

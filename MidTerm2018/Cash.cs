@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MidTerm2018
 {
-    class Cash:Payment
+    class Cash : Payment
     {
         #region DataMembers
         private decimal amountTendered;
@@ -32,7 +32,7 @@ namespace MidTerm2018
         {
 
         }
-        public Cash(decimal Total, decimal cash):base(Total)
+        public Cash(decimal Total, decimal cash) : base(Total)
         {
             Change = cash;
         }
@@ -46,5 +46,5 @@ namespace MidTerm2018
             return Change;
         }
         #endregion
-}
+    }
 }

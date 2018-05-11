@@ -34,36 +34,19 @@ namespace MidTerm2018
         }
         #endregion
 
-        #region Default Constructor
-        public Credit ()
+        #region Constructor
+        public Credit()
         {
 
         }
-        #endregion
-
-        #region Method Overload Constructor
-        public Credit(string card, string expir, string cvv)
+        public Credit(string card, string expir, string cvv, decimal total) : base(Total)
         {
             CardNumber = card;
             ExpDate = expir;
             CVV = cvv;
 
         }
-
-    
-
-
-
+        #endregion
     }
-
-
-
-
-
-
-    }
-
-
-
 
 }

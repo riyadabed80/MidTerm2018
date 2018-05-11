@@ -12,7 +12,7 @@ namespace MidTerm2018
         private string name;
         private string category;
         private string description;
-        private decimal price;
+        private double price;
         #endregion
         #region properties
         public string Name
@@ -48,7 +48,7 @@ namespace MidTerm2018
                 description = value;
             }
         }
-        public decimal Price
+        public double Price
         {
             get
             {
@@ -65,16 +65,15 @@ namespace MidTerm2018
         {
 
         }
-        public Product(string NAME, string CATEGORY, string DESCRIPTION, decimal PRICE)
+
+        public Product(string NAME, string CATEGORY, string DESCRIPTION, double PRICE)
         {
             Name = NAME;
             Category = CATEGORY;
             Description = DESCRIPTION;
             Price = PRICE;
+
+            #endregion
         }
-        #endregion
-        #region methods
-        // use a method to calculate the amount cost for the item by taking user input quantity 
-        #endregion
     }
 }

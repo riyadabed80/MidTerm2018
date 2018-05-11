@@ -181,9 +181,6 @@ namespace Midterm
 
                     }
             }
-
-
-
         }
 
 

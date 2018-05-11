@@ -13,8 +13,20 @@ namespace MidTerm2018
         private string category;
         private string description;
         private double price;
+        private double quantity;
         #endregion
         #region properties
+        public double Quantity
+        {
+            get
+            {
+                return quantity;
+            }
+            set
+            {
+                quantity = value;
+            }
+        }
         public string Name
         {
             get
@@ -73,7 +85,16 @@ namespace MidTerm2018
             Description = DESCRIPTION;
             Price = PRICE;
 
-            #endregion
         }
+        #endregion
+        #region methods
+        // use a method to calculate the amount cost for the item by taking user input quantity 
+        public double PriceForQuantity()
+        {
+            double pricequantity;
+            return pricequantity = price * quantity;
+        }
+        #endregion
+
     }
 }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MidTerm2018;
 
 namespace Midterm
 {
@@ -11,25 +12,50 @@ namespace Midterm
     {
         static void Main(string[] args)
         {
-            
-            string[] Names = new string[] { "Sophia", "Olivia", "Emma\n\n\n" };
+            StreamReader Reader = new StreamReader("../../Products.txt");
+            string line = Reader.ReadLine();
+            List<Product> products = new List<Product>();
+
+            while (!String.IsNullOrEmpty(line))
+            {
+                string[] LinebyLine = line.Split('|');
+
+                products.Add(new Product(LinebyLine[0], LinebyLine[1], LinebyLine[2], (double.Parse(LinebyLine[3]))));
+
+                line = Reader.ReadLine();
+            }
+            //return products;
+            string[] Names = new string[] { "Sophia ", "Olivia ", "Emma " };
+            string[] Category = new string[] {"Drinks", "Food","Merchandise" };
+
             Random numbering = new Random();
             int index = numbering.Next(3);
 
             Console.WriteLine("\t\t\tWelcome to Detroit Coffee Shop");
-            Console.WriteLine($"this is {Names[index]}, How Can i Help you?\n" +
-                $"press any key to start placeing order ? \n");
+            Console.WriteLine($"This is {Names[index]}, How can I help you?\n" +
+                $"Press any key to start placing order.\n");
             System.Console.ReadKey();
-          
-            Console.WriteLine("Please choose a category: \n1.  Drinks \n2.  Food \n3.  Merchandise");
-
+            Console.Clear();
+            Console.WriteLine($"Please choose a category: \n1.  Drinks \n2.  Food \n3.  Merchandise");
             int menuInput = ValidateNum();
+            int counter = 0;
+            foreach (var item in products)
+            {
+
+                if (item.Category.Contains(Category[menuInput-1]))
+                    {
+                        counter++;
+                        Console.WriteLine($"{counter}: {item.Name}{item.Price}");
+
+                    }
+            }
             switch (menuInput)
             {
                 case 1:
                     {
                         Console.Clear();
-                        Console.WriteLine("Drinks\n\n1.  Coffee Dark Roast \n2.  Mocha Frappuccino \n3.  Iced Coffee \n4.  Teavana Green Tea  \n5.  Hot Chocolate");
+                        Menuing();
+                        //Console.WriteLine("Drinks\n\n1.  Coffee Dark Roast \n2.  Mocha Frappuccino \n3.  Iced Coffee \n4.  Teavana Green Tea  \n5.  Hot Chocolate");
                         int selection = int.Parse(Console.ReadLine());
                         switch (selection)
                         {
@@ -91,7 +117,7 @@ namespace Midterm
                                 }
                             case 3:
                                 {
-                                    
+
                                     break;
                                 }
                             case 4:
@@ -177,7 +203,8 @@ namespace Midterm
                                     break;
                                 }
 
-                        }break;
+                        }
+                        break;
 
                     }
             }
@@ -193,6 +220,29 @@ namespace Midterm
             }
 
             return input;
+        }
+
+        public static List<Product> Menuing()
+        {
+
+            //read from text file
+            StreamReader Reader = new StreamReader("../../Products.txt");
+            //empty list
+
+            List<Product> products = new List<Product>();
+            //save the text file in single string format
+            string line = Reader.ReadLine();
+
+            while (!String.IsNullOrEmpty(line))
+            {
+                string[] LinebyLine = line.Split('|');
+
+                products.Add(new Product(LinebyLine[0], LinebyLine[1], LinebyLine[2], (double.Parse(LinebyLine[3]))));
+
+                line = Reader.ReadLine();
+            }
+            return products;
+
         }
     }
 }

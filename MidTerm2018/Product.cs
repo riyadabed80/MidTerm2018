@@ -88,6 +88,7 @@ namespace MidTerm2018
             Price = PRICE;
 
         }
+
         #endregion
         #region methods
         // use a method to calculate the amount cost for the item by taking user input quantity 

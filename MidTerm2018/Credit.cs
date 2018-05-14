@@ -49,7 +49,7 @@ namespace MidTerm2018
 
         }
 
-        #endregion
+         #endregion
         public void EncryptCCN()
         {
             Console.WriteLine("Please input your credit card number(16 digits).");

@@ -48,21 +48,21 @@ namespace MidTerm2018
             string[] StaticCategory = new string[] { "Drinks", "Food", "Merchandise" };
             Random numbering = new Random();
             int index = numbering.Next(3);
-            Console.WriteLine("\t\t\tWelcome to Detroit Coffee Shop");
-            Console.WriteLine($"This is {Names[index]}, How can I help you?\n");
+            Console.WriteLine("\t\t\tWelcome to Grand Circus Cafe");
+            Console.WriteLine($"\nThis is {Names[index]}, How can I help you?\n");
             List<Products> Searching = FileEdit.ReadingList();
 
             List<Products> ICart = new List<Products>();
 
 
-            Console.Write($"{"==========",-15}");
+            Console.Write($"{"================",-10}");
             Console.WriteLine($"{"==========",-10}");
 
 
             bool repeat = true;
             while (repeat)
             {
-                Console.WriteLine($"Please choose a category: \n(1).  Drinks \n(2).  Food \n(3).  Merchandise");
+                Console.WriteLine($"Please choose a category: \n(1).  Beverages \n(2).  Food \n(3).  Merchandise");
                 int input = ValidateNum();
                 int counter = 0;
                 foreach (var item in Searching)

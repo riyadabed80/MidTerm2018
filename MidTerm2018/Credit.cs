@@ -49,44 +49,52 @@ namespace MidTerm2018
 
         }
 
-         #endregion
+        #endregion
         public void EncryptCCN()
         {
+            List<Products> ICart = new List<Products>();
             Console.WriteLine("Please input your credit card number(16 digits).");
             string CardNumber = Console.ReadLine();
-            Console.WriteLine("Please input CVV");
-            string CCV = Console.ReadLine();
-            Console.WriteLine("Please input expiration");
-            string ExpDate = Console.ReadLine();
-            bool tryagain = true;
-            while (tryagain)
-            {
-                if (CardNumber.Length == 16 & CCV.Length == 3 & ExpDate.Length == 5 )
+    
+                
+                Console.WriteLine("Please input CVV");
+                string CCV = Console.ReadLine();
+                Console.WriteLine("Please input expiration in mm/yy format");
+                string ExpDate = Console.ReadLine();
+                bool tryagain = true;
+                while (tryagain)
                 {
-                    CardNumber = CardNumber.Remove(0, 12);
-                    Console.WriteLine("************" + CardNumber);
-                    Console.WriteLine(CCV);
-                    Console.WriteLine(ExpDate);
-                    Console.WriteLine("Your card was accepted. Thank you");
-                    tryagain = false;
-                }
-                else
-                {
-                    Console.WriteLine("Invalid input.\nPlease reenter credit card number");
-                    CardNumber = Console.ReadLine();
-                    Console.WriteLine("Please reenter your CVV.");
-                    CCV = Console.ReadLine();
-                    Console.WriteLine("Please reenter your expiration date.");
-                    ExpDate = Console.ReadLine();
+                    if (CardNumber.Length == 16 & CCV.Length == 3 & ExpDate.Length == 5)
+                    {
 
 
+                        CardNumber = CardNumber.Remove(0, 12);
+                        Console.WriteLine("************" + CardNumber);
+                        Console.WriteLine("Check accepted. Thank you!");
+                        //checkagain = false;
+                        Console.WriteLine(CCV);
+                        Console.WriteLine(ExpDate);
+                        Console.WriteLine("Your card was accepted. Thank you");
+                        tryagain = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid input.\nPlease reenter credit card number");
+                        CardNumber = Console.ReadLine();
+                        Console.WriteLine("Please reenter your CVV.");
+                        CCV = Console.ReadLine();
+                        Console.WriteLine("Please reenter your expiration date.");
+                        ExpDate = Console.ReadLine();
+
+
+                    }
                 }
+
+
             }
-
-
         }
     }
-}
+
 
 
 

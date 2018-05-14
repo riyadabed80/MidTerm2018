@@ -13,6 +13,32 @@ namespace MidTerm2018
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("\n\n\n\n\n");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("\t\t                  GG           GG");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("\t\t                GG           GG");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("\t\t               GG           GG");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("\t\t                     GG          GG ");
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine("\t\t             CCCCCCCCCCCCCCCCCCCCCCCCC");
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine("\t\t             CCCCCC           CCCCCCCCCCCCC");
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine("\t\t             CCCCCC              CC      CC ");
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine("\t\t             CCCCCC           CCCCCCCCCCCCC ");
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine("\t\t             CCCCCCCCCcccCCCCCCCCCCCcC");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("\n                           G R A N D   C I R C U S   C A F E");
+            Console.ReadLine();
+            Console.Clear();
+
+            Console.ForegroundColor = ConsoleColor.White;
+
             Cash c = new Cash();
             Check lol = new Check();
 
@@ -143,8 +169,10 @@ namespace MidTerm2018
                     }
                     else if (payOption == "2")
                     {
+
                         Credit credit = new Credit();
                         credit.EncryptCCN();
+
 
                     }
                     else if (payOption == "3")

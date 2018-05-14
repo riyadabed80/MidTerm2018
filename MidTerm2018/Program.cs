@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Drawing;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,7 @@ namespace MidTerm2018
             Check lol = new Check();
 
 
+
             string[] Names = new string[] { "Sophia ", "Olivia ", "Emma " };
             string[] StaticCategory = new string[] { "Drinks", "Food", "Merchandise" };
             Random numbering = new Random();
@@ -23,6 +25,7 @@ namespace MidTerm2018
             Console.WriteLine("\t\t\tWelcome to Detroit Coffee Shop");
             Console.WriteLine($"This is {Names[index]}, How can I help you?\n");
             List<Products> Searching = FileEdit.ReadingList();
+
             List<Products> ICart = new List<Products>();
 
 
@@ -36,19 +39,32 @@ namespace MidTerm2018
                 Console.WriteLine($"Please choose a category: \n(1).  Drinks \n(2).  Food \n(3).  Merchandise");
                 int input = int.Parse(Console.ReadLine());
                 int counter = 0;
-                foreach (var item in Searching)
-                {
-                    if (item.Category.Contains(StaticCategory[input - 1]))
+                    foreach (var item in Searching)
                     {
+                        if (item.Category == (StaticCategory[input - 1]))
+                        {
 
-                        counter++;
-                        Console.WriteLine($"{counter}: {item.Name} {item.Price}");
+                            counter++;
+                            Console.WriteLine($"{counter}: {item.Name} {item.Price}");
+                        }
                     }
-                }
+            
                 Console.WriteLine("Please pick a number to add to your cart");
                 int userPickIndex = int.Parse(Console.ReadLine());
+                if (input == 3)
+                {
+                    ICart.Add(Searching[userPickIndex + 14]);
+                }
+                if (input == 2)
+                {
+                    ICart.Add(Searching[userPickIndex + 4]);
+                }
+                if (input == 1)
+                {
+                    ICart.Add(Searching[userPickIndex - 1]);
+                }
                 //save the user selection
-                ICart.Add(Searching[userPickIndex - 1]);
+
                 double total = 0.0;
                 Console.WriteLine("Your cart contains the following items: ");
                 foreach (var item in ICart)
@@ -75,8 +91,8 @@ namespace MidTerm2018
                     {
                         Console.WriteLine("Please enter amount tendered");
                         double amountTendered = double.Parse(Console.ReadLine());
-                        //double Change = c.GetChange();
-                        Console.WriteLine($"Your change is: {amountTendered - total,0:C}");
+                        Cash cash = new Cash(total, amountTendered);
+                        Console.WriteLine($"{cash.GetChange(),0:C}");
                     }
                     else if (payOption == "2")
                     {
@@ -95,6 +111,7 @@ namespace MidTerm2018
                             {
                                 Console.WriteLine("Invalid card number. Please reenter credit card number");
                                 ccn = Console.ReadLine();
+                                
                             }
                         }
 
@@ -121,8 +138,9 @@ namespace MidTerm2018
                         }
 
                     }
-
+                    repeat = false;
                 }
+                Console.WriteLine("Have a great day!");
             }
         }
     }

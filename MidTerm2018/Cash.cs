@@ -33,10 +33,10 @@ namespace MidTerm2018
 
         }
 
-        public Cash(double Total, double cash) : base(Total)
+        public Cash(double Total, double TENDERED) : base(Total)
 
         {
-            Change = cash;
+            AmountTendered = TENDERED;
         }
 
         #endregion

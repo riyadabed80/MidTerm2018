@@ -143,24 +143,8 @@ namespace MidTerm2018
                     }
                     else if (payOption == "2")
                     {
-
-                        Console.WriteLine("Please enter 16 digit card number: ");
-                        string ccn = Console.ReadLine();
-                        bool tryagain = true;
-                        while (tryagain)
-                        {
-                            if (Regex.IsMatch(ccn, @"^(?:\d[-]*?){16}$"))
-                            {
-                                Console.WriteLine("Your card was accepted.  Thank you");
-                                tryagain = false;
-                            }
-                            else
-                            {
-                                Console.WriteLine("Invalid card number. Please reenter credit card number");
-                                ccn = Console.ReadLine();
-
-                            }
-                        }
+                        Credit credit = new Credit();
+                        credit.EncryptCCN();
 
                     }
                     else if (payOption == "3")

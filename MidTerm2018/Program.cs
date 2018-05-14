@@ -37,31 +37,58 @@ namespace MidTerm2018
             while (repeat)
             {
                 Console.WriteLine($"Please choose a category: \n(1).  Drinks \n(2).  Food \n(3).  Merchandise");
-                int input = int.Parse(Console.ReadLine());
+                int input = ValidateNum();
                 int counter = 0;
-                    foreach (var item in Searching)
+                foreach (var item in Searching)
+                {
+                    if (item.Category == (StaticCategory[input - 1]))
                     {
-                        if (item.Category == (StaticCategory[input - 1]))
-                        {
 
-                            counter++;
-                            Console.WriteLine($"{counter}: {item.Name} {item.Price}");
-                        }
+                        counter++;
+                        Console.WriteLine($"{counter}: {item.Name} {item.Price}");
                     }
-            
+                }
+
                 Console.WriteLine("Please pick a number to add to your cart");
                 int userPickIndex = int.Parse(Console.ReadLine());
                 if (input == 3)
                 {
-                    ICart.Add(Searching[userPickIndex + 14]);
+                    if (userPickIndex > 7 || userPickIndex <= 1)
+                    {
+                        Console.WriteLine("Please enter number between 1 and 7");
+                    }
+                    else
+                    {
+                        ICart.Add(Searching[userPickIndex + 14]);
+
+                    }
                 }
-                if (input == 2)
+                else if (input == 2)
                 {
-                    ICart.Add(Searching[userPickIndex + 4]);
+                    if (userPickIndex > 10 || userPickIndex <= 1)
+                    {
+                        Console.WriteLine("Please enter number between 1 and 10");
+                    }
+                    else
+                    {
+                        ICart.Add(Searching[userPickIndex + 4]);
+                    }
                 }
-                if (input == 1)
+                else if (input == 1)
                 {
-                    ICart.Add(Searching[userPickIndex - 1]);
+                    if (userPickIndex > 5 || userPickIndex <= 1)
+                    {
+                        Console.WriteLine("Please enter number between 1 and 5");
+                    }
+                    else
+                    {
+                        ICart.Add(Searching[userPickIndex - 1]);
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Invalid entry. Please enter a valid number");
+                    userPickIndex = int.Parse(Console.ReadLine());
                 }
                 //save the user selection
 
@@ -111,7 +138,7 @@ namespace MidTerm2018
                             {
                                 Console.WriteLine("Invalid card number. Please reenter credit card number");
                                 ccn = Console.ReadLine();
-                                
+
                             }
                         }
 
@@ -143,5 +170,18 @@ namespace MidTerm2018
                 Console.WriteLine("Have a great day!");
             }
         }
+
+        private static int ValidateNum()
+        {
+            int menuInput;
+            while (!int.TryParse(Console.ReadLine(), out menuInput) || menuInput < 1 || menuInput > 3)
+            {
+                Console.WriteLine("Invalid input. Please enter a valid number between 1 and 3");
+            }
+
+            return menuInput;
+        }
+
+
     }
 }

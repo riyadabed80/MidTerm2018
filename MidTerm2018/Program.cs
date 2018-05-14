@@ -53,7 +53,7 @@ namespace MidTerm2018
                 int userPickIndex = int.Parse(Console.ReadLine());
                 if (input == 3)
                 {
-                    if (userPickIndex > 7 || userPickIndex <= 1)
+                    if (userPickIndex > 7 || userPickIndex < 1)
                     {
                         Console.WriteLine("Please enter number between 1 and 7");
                     }
@@ -65,7 +65,7 @@ namespace MidTerm2018
                 }
                 else if (input == 2)
                 {
-                    if (userPickIndex > 10 || userPickIndex <= 1)
+                    if (userPickIndex > 10 || userPickIndex < 1)
                     {
                         Console.WriteLine("Please enter number between 1 and 10");
                     }
@@ -76,7 +76,7 @@ namespace MidTerm2018
                 }
                 else if (input == 1)
                 {
-                    if (userPickIndex > 5 || userPickIndex <= 1)
+                    if (userPickIndex > 5 || userPickIndex < 1)
                     {
                         Console.WriteLine("Please enter number between 1 and 5");
                     }
@@ -93,12 +93,32 @@ namespace MidTerm2018
                 //save the user selection
 
                 double total = 0.0;
-                Console.WriteLine("Your cart contains the following items: ");
-                foreach (var item in ICart)
+                if (ICart.Count == 0)
                 {
-                    Console.WriteLine($"{item.Name} {item.Price,0:C}");
-                    total = total + (item.Price * 1.06 / 100) + item.Price;
-
+                    Console.WriteLine($"Your cart contains No item ");
+                    foreach (var item in ICart)
+                    {
+                        Console.WriteLine($"{item.Name} {item.Price,0:C}");
+                        total = total + (item.Price * 1.06 / 100) + item.Price;
+                    }
+                }
+                else if (ICart.Count == 1)
+                {
+                    Console.WriteLine($"Your cart contains ({ICart.Count}) item ");
+                    foreach (var item in ICart)
+                    {
+                        Console.WriteLine($"{item.Name} {item.Price,0:C}");
+                        total = total + (item.Price * 1.06 / 100) + item.Price;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine($"Your cart contains ({ICart.Count}) items ");
+                    foreach (var item in ICart)
+                    {
+                        Console.WriteLine($"{item.Name} {item.Price,0:C}");
+                        total = total + (item.Price * 1.06 / 100) + item.Price;
+                    }
                 }
 
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MidTerm2018
 {
-    class Product
+    class Products
     {
         #region data members
         private string name;
@@ -74,18 +74,17 @@ namespace MidTerm2018
         }
         #endregion
         #region constructor
-
-        public Product()
+        public Products()
         {
 
         }
-
-        public Product(string NAME, string CATEGORY, string DESCRIPTION, double PRICE)
+        public Products(string category, string name, string description, double price)
         {
-            Name = NAME;
-            Category = CATEGORY;
-            Description = DESCRIPTION;
-            Price = PRICE;
+
+            Name = name;
+            Category = category;
+            Description = description;
+            Price = price;
 
         }
 

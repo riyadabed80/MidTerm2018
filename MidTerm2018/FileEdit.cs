@@ -6,31 +6,42 @@ using System.IO;
 using MidTerm2018;
 using System;
 
-namespace Mid_Term_Project
+
+namespace MidTerm2018
 {
     class FileEdit
     {
-        public static List<Product> Menuing()
+        public static List<Products> ReadingList()
         {
-
             //read from text file
             StreamReader Reader = new StreamReader("../../Products.txt");
-            //empty list
 
-            List<Product> products = new List<Product>();
             //save the text file in single string format
             string line = Reader.ReadLine();
+            //empty list of a Products class
+            List<Products> Allproducts = new List<Products>();
 
             while (!String.IsNullOrEmpty(line))
             {
                 string[] LinebyLine = line.Split('|');
 
-                products.Add(new Product(LinebyLine[0], LinebyLine[1], LinebyLine[2], (double.Parse(LinebyLine[3]))));
+                Allproducts.Add(new Products(LinebyLine[0], LinebyLine[1], LinebyLine[2], double.Parse(LinebyLine[3])));
 
                 line = Reader.ReadLine();
             }
-            return products;
+            Reader.Close();
+            return Allproducts;
+        }
 
+        public static void WritingList(List<Products> WritingMethod)
+        {
+            StreamWriter Writer = new StreamWriter("../../Products.txt", false);
+
+            foreach (Products p in WritingMethod)
+            {
+                Writer.WriteLine($"{p.Category}|{p.Name}|{p.Description}|{p.Price}");
+            }
+            Writer.Close();
         }
     }
 }

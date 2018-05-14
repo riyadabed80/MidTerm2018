@@ -45,9 +45,10 @@
     <Compile Include="Check.cs" />
     <Compile Include="Credit.cs" />
     <Compile Include="Cash.cs" />
+    <Compile Include="Check.cs" />
     <Compile Include="FileEdit.cs" />
     <Compile Include="Payment.cs" />
-    <Compile Include="Product.cs" />
+    <Compile Include="Products.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

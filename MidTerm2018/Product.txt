@@ -3,7 +3,7 @@ Drinks|Mocha Frappuccino|Mocha sauce Frappuccino roast coffee with milk and ice.
 Drinks|Iced Coffee|Freshly brewed Iced Coffee Blend served chilled and lightly sweetened over ice.|4.99
 Drinks|Coffee Dark Roast|This full-bodied dark roast coffee has the bold and robust flavors.|4.99
 Drinks|Hot Chocolate|Steamed milk with vanilla- and mocha-flavored syrups. Topped with sweetened whipped cream and chocolate-flavored drizzle.|5.99
-Food| Breakfast Sandwich|Made with tasty cherrywood-smoked Canadian bacon a peppered egg patty and reduced-fat white cheddar on a gluten free roll.|5.99
+Food|Breakfast Sandwich|Made with tasty cherrywood-smoked Canadian bacon a peppered egg patty and reduced-fat white cheddar on a gluten free roll.|5.99
 Food|Chicken Panini|Made with hormone free grilled chicken onions white cheddar and spinach tucked between two slices of locally baked bread by Avalon.|9.99
 Food|Veggie Wrap|A delicious combination of avacado roasted red peppers red onions cucumbers tomato romaine all wrapped in spinach flat.|7.99
 Food|Strawberry Salad|Our fresh strawberry salad can't be beat! With fresh locally grown strawberries tossed in a rasberry vignagrette, baby spinach and feta cheese.|8.99

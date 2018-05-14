@@ -23,7 +23,7 @@ namespace MidTerm2018
         {
 
         }
-        public Check(decimal Total, string CheckNumber) :base(Total)
+        public Check(double Total, string CheckNumber) :base(Total)
         {
             CheckNum = CheckNumber;
         }

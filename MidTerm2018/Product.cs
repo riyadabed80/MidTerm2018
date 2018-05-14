@@ -14,6 +14,7 @@ namespace MidTerm2018
         private string description;
         private double price;
         private double quantity;
+
         #endregion
         #region properties
         public double Quantity
@@ -73,6 +74,7 @@ namespace MidTerm2018
         }
         #endregion
         #region constructor
+
         public Product()
         {
 

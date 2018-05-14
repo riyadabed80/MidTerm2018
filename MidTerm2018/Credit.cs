@@ -39,14 +39,33 @@ namespace MidTerm2018
         {
 
         }
-        public Credit(string card, string expir, string cvv, decimal total) : base(total)
+        public Credit(string card, string expir, string cvv, double total) : base(total)
         {
             CardNumber = card;
             ExpDate = expir;
             CVV = cvv;
 
         }
+
         #endregion
     }
 
 }
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+

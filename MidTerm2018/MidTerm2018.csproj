@@ -44,6 +44,8 @@
   <ItemGroup>
     <Compile Include="Check.cs" />
     <Compile Include="Credit.cs" />
+    <Compile Include="Cash.cs" />
+    <Compile Include="FileEdit.cs" />
     <Compile Include="Payment.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
@@ -53,7 +55,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Merchandise.txt" />
     <Content Include="Product.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

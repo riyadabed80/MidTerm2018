@@ -11,16 +11,16 @@ namespace Midterm
     {
         static void Main(string[] args)
         {
+            
+            string[] Names = new string[] { "Sophia", "Olivia", "Emma\n\n\n" };
+            Random numbering = new Random();
+            int index = numbering.Next(3);
 
-            ////StreamReader sr = new StreamReader("../../Merchandise.txt");
-            ////string line = sr.ReadLine();
-            ////while(line !=null)
-            //{
-            //    Console.WriteLine(line);
-            //    line = sr.ReadLine();
-            //}
-
-            Console.WriteLine("Welcome to Grand Circus Coffee!");
+            Console.WriteLine("\t\t\tWelcome to Detroit Coffee Shop");
+            Console.WriteLine($"this is {Names[index]}, How Can i Help you?\n" +
+                $"press any key to start placeing order ? \n");
+            System.Console.ReadKey();
+          
             Console.WriteLine("Please choose a category: \n1.  Drinks \n2.  Food \n3.  Merchandise");
 
             int menuInput = ValidateNum();

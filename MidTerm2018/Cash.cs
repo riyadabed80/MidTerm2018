@@ -9,17 +9,17 @@ namespace MidTerm2018
     class Cash : Payment
     {
         #region DataMembers
-        private decimal amountTendered;
-        private decimal change;
+        private double amountTendered;
+        private double change;
         #endregion
 
         #region Properties
-        public decimal AmountTendered
+        public double AmountTendered
         {
             set { amountTendered = value; }
             get { return amountTendered; }
         }
-        public decimal Change
+        public double Change
         {
             set { change = value; }
             get { return change; }
@@ -32,7 +32,9 @@ namespace MidTerm2018
         {
 
         }
-        public Cash(decimal Total, decimal cash) : base(Total)
+
+        public Cash(double Total, double cash) : base(Total)
+
         {
             Change = cash;
         }
@@ -40,7 +42,7 @@ namespace MidTerm2018
         #endregion
 
         #region
-        public decimal GetChange()
+        public double GetChange()
         {
             Change = (AmountTendered - Total);
             return Change;

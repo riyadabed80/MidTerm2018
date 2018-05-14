@@ -9,10 +9,13 @@ namespace MidTerm2018
     abstract class Payment
     {
         #region data members
-        private decimal total;
+
+        private double total;
+
+
         #endregion
         #region properties
-        public decimal Total
+        public double Total
         {
             get
             {
@@ -30,10 +33,12 @@ namespace MidTerm2018
         {
 
         }
-        public Payment(decimal TOTAL)
+
+        public Payment(double TOTAL)
         {
             Total = TOTAL;
         }
+
         #endregion
 
     }

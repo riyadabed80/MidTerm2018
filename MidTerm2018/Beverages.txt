@@ -3,11 +3,3 @@ Drinks|Mocha Frappuccino|Mocha sauce Frappuccino roast coffee with milk and ice.
 Drinks|Iced Coffee|Freshly brewed Iced Coffee Blend served chilled and lightly sweetened over ice.|4.99
 Drinks|Coffee Dark Roast|This full-bodied dark roast coffee has the bold and robust flavors.|4.99
 Drinks|Hot Chocolate|Steamed milk with vanilla- and mocha-flavored syrups. Topped with sweetened whipped cream and chocolate-flavored drizzle.|5.99
-
-Merchandise|Coffee Mug|Ergonomic handle-perfect enjoying a cup of joe at home|9.99
-Merchandise|Travel Mug|Insulated and Spill Proof|13.99
-Merchandise|T-Shirts|Pre-shrunk stylish 100% Pima cotton|21.99
-Merchandise|Coffee Maker|Enjoy our coffee from the comfort of your own home|9.99
-Merchandise|Gift Cards|Give the gift of great coffee|25
-Merchandise|Gift Cards|Give the gift of great coffee|50
-Merchandise|Gift Cards|Give the gift of great coffee|100

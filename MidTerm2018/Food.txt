@@ -1,0 +1,10 @@
+﻿Food|Breakfast Sandwich|Made with tasty cherrywood-smoked Canadian bacon a peppered egg patty and reduced-fat white cheddar on a gluten free roll.|5.99
+Food|Chicken Panini|Made with hormone free grilled chicken onions white cheddar and spinach tucked between two slices of locally baked bread by Avalon.|9.99
+Food|Veggie Wrap|A delicious combination of avacado roasted red peppers red onions cucumbers tomato romaine all wrapped in spinach flat.|7.99
+Food|Strawberry Salad|Our fresh strawberry salad can't be beat! With fresh locally grown strawberries tossed in a rasberry vignagrette, baby spinach and feta cheese.|8.99
+Food|Berry Yogurt|Greet your day with powerful protein, flavorful berries and a cascade of crunch with our nonfat vanilla yogurt sliced strawberries whole blueberries raspberries and crisp honey-oat granola.|4.99
+Food|Chocolate Croissant|Light flakey 100 percent butter croissant dough is wrapped around two chocolate batons to create a perfect balance that'll satisfy your sweet tooth.|3.99
+Food|Cake Pops|Vanilla flavored and colorfully decorated. The perfect treat when you're on the go.|2.99
+Food|Banana Nut Bread|Bananas walnuts and pecans in moist nutty classic banana bread.|4.99
+Food|Cinnamon Roll|Spicy single-origin Sumatran cinnamon is swirled around our flaky buttery pastry to wake you up with a wow.|4.99
+Food|Chocolate Chip Cookie|We mix a generous amount of single-origin chocolate into every Chocolate Chip Cookie. Allow us to warm yours to gooey perfection before you take your first bite.|2.99

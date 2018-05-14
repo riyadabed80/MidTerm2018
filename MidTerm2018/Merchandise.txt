@@ -1,0 +1,7 @@
+﻿Merchandise|Coffee Mug|Ergonomic handle-perfect enjoying a cup of joe at home|9.99
+Merchandise|Travel Mug|Insulated and Spill Proof|13.99
+Merchandise|T-Shirts|Pre-shrunk stylish 100% Pima cotton|21.99
+Merchandise|Coffee Maker|Enjoy our coffee from the comfort of your own home|9.99
+Merchandise|Gift Cards|Give the gift of great coffee|25
+Merchandise|Gift Cards|Give the gift of great coffee|50
+Merchandise|Gift Cards|Give the gift of great coffee|100

@@ -25,14 +25,16 @@ namespace MidTerm2018
             List<Products> Searching = FileEdit.ReadingList();
             List<Products> ICart = new List<Products>();
 
+
             Console.Write($"{"==========",-15}");
             Console.WriteLine($"{"==========",-10}");
 
-            Console.WriteLine($"Please choose a category: \n(1).  Drinks \n(2).  Food \n(3).  Merchandise");
-            int input = int.Parse(Console.ReadLine());
+
             bool repeat = true;
             while (repeat)
             {
+                Console.WriteLine($"Please choose a category: \n(1).  Drinks \n(2).  Food \n(3).  Merchandise");
+                int input = int.Parse(Console.ReadLine());
                 int counter = 0;
                 foreach (var item in Searching)
                 {
@@ -52,9 +54,10 @@ namespace MidTerm2018
                 foreach (var item in ICart)
                 {
                     Console.WriteLine($"{item.Name} {item.Price,0:C}");
-                    total = (item.Price * 1.06 / 100) + item.Price;
+                    total = total + (item.Price * 1.06 / 100) + item.Price;
+
                 }
-                Console.WriteLine($"Your total is: {total,0:C} ");
+
 
                 Console.WriteLine("Would you like to add more? y/n");
 
@@ -65,6 +68,7 @@ namespace MidTerm2018
                 }
                 else
                 {
+                    Console.WriteLine($"Your total is: {total,0:C} ");
                     Console.WriteLine("Please choose a payment method: (1)Cash  (2)Credit  (3)Check");
                     string payOption = Console.ReadLine();
                     if (payOption == "1")

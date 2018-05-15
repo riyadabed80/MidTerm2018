@@ -204,7 +204,7 @@ namespace MidTerm2018
                     }
                     repeat = false;
                 }
-                Console.WriteLine("Have a great day!");
+               // Console.WriteLine("Have a great day!");
             }
         }
 

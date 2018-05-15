@@ -25,11 +25,11 @@ namespace MidTerm2018
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine("\t\t             CCCCCCCCCCCCCCCCCCCCCCCCC");
             Console.ForegroundColor = ConsoleColor.DarkYellow;
-            Console.WriteLine("\t\t             CCCCCC           CCCCCCCCCCCCC");
+            Console.WriteLine("\t\t            CCCCCCC           CCCCCCCCCCCCC");
             Console.ForegroundColor = ConsoleColor.DarkYellow;
-            Console.WriteLine("\t\t             CCCCCC              CC      CC ");
+            Console.WriteLine("\t\t           CCCCCCCC              CC      CC ");
             Console.ForegroundColor = ConsoleColor.DarkYellow;
-            Console.WriteLine("\t\t             CCCCCC           CCCCCCCCCCCCC ");
+            Console.WriteLine("\t\t            CCCCCCC           CCCCCCCCCCCCC ");
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine("\t\t             CCCCCCCCCcccCCCCCCCCCCCcC");
             Console.ForegroundColor = ConsoleColor.White;
@@ -196,6 +196,11 @@ namespace MidTerm2018
                             }
                         }
 
+                    }
+                    else
+                    {
+                        Console.WriteLine("Please enter a number between 1 and 3");
+                        payOption = Console.ReadLine();
                     }
                     repeat = false;
                 }

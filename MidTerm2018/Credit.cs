@@ -64,14 +64,12 @@ namespace MidTerm2018
                 bool tryagain = true;
                 while (tryagain)
                 {
-                    if (CardNumber.Length == 16 & CCV.Length == 3 & ExpDate.Length == 5)
+                    if (CardNumber.Length == 16 && CCV.Length == 3 && ExpDate.Length == 5)
                     {
 
 
                         CardNumber = CardNumber.Remove(0, 12);
                         Console.WriteLine("************" + CardNumber);
-                        Console.WriteLine("Check accepted. Thank you!");
-                        //checkagain = false;
                         Console.WriteLine(CCV);
                         Console.WriteLine(ExpDate);
                         Console.WriteLine("Your card was accepted. Thank you");
